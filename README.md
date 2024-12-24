@@ -55,7 +55,6 @@
 ### API 사용
 - 공공데이터 포탈 등
 - [공연정보 불러오기 API](https://www.kopis.or.kr/por/cs/openapi/openApiInfo.do?menuId=MNU_00074)
-- 로그인 (카카오, 네이버 등)
 - 결제 (토스페이 API)
   
 ### DB 
