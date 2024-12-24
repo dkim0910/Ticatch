@@ -28,11 +28,11 @@
 - 약 2달
 
 ## 맴버 구성
-- 조장 : 김민성 - 예매페이지 / 결제 / DB / ERD /  플로우 차트 / 시퀀스 다이어그램
-- 팀원 : 박성우 - 마이페이지 / DB / ERD / 공연정보 불러오기 / Git 설정 / 스프링 & 리액트 통합
-- 팀원 : 이혜원 - 상세페이지 / 후기 / 찜 / DB / ERD / 플로우 차트 / 유스케이스
-- 팀원 : 손홍석 - 로그인 및 회원 가입 / 와이어프레임 
-- 팀원 : 신윤창 - 메인페이지 / 헤더 및 푸터
+- 조장 : 김민성 - 예매페이지 / 결제 / DB / ERD /  플로우 차트 / 시퀀스 다이어그램 / 메인페이지 / 마이페이지 / 로그인 및 회원가입 / 공연정보 불러오기 API
+- 팀원 : 박성우 - DB / ERD / 공연정보 불러오기 API / Git 설정 / 스프링 & 리액트 통합
+- 팀원 : 이혜원 - 상세페이지 / 후기 / 찜 / DB / ERD / 플로우 차트 / 유스케이스 / 메인페이지 / 마이페이지 
+- 팀원 : 손홍석 - 와이어프레임 
+- 팀원 : 신윤창 - 
 
 (나중에 문서 작업 및 발표 적기)
 
@@ -40,15 +40,16 @@
 [플로우 차트 / ERD / 와이어프레임 유스케이스 등](https://drive.google.com/file/d/1rJ98jUYeRiusLpkJjoduckJKTypFYKiF/view?usp=sharing)
 
 ## 개발 환경
+(노트북에서 작동하려고 해서 버전은 검수 필요함)
 ### Front-End
-- React (18.3.1) << 검수 필요
+- React (18.3.1)
 ### Back-End
-- Java 17 <- 21 << 노트북으로 옮길때 21로 됨 (Reservation 은 21로 작동함)
+- Java 17 <- 21 << 노트북으로 옮길때 21로 됨 (Reservation 및 newDetail 은 21로 작동함)
 - IDE : Spring Tools 4.25.0
 - Framewordk : Springboot (3.3.5)
 - Server : Apache / Tomcat
 - Database : Oracle DB (11.2.0.2.0) (DBeaber 24.1.3)
-- ORM : Hibernate (JPA) << 검수 필요
+- ORM : Hibernate (JPA)
 
 ## 주요 기능
 ### API 사용
@@ -118,7 +119,6 @@ SELECT * FROM ORDERS o ;
 
 TRUNCATE TABLE ORDERS;
 
-
 -- 좌석 개수 및 판매좌석 조회 테이블 
 CREATE TABLE Seat (
     seq_pfjoin_id NUMBER NOT NULL, -- 공연 시퀀스 아이디 (PK/FK)
@@ -172,6 +172,11 @@ CREATE TABLE Save(
 CREATE SEQUENCE SEQ_SAVE_ID
 START WITH 1
 INCREMENT BY 1;
+
+-- save 테이블에 p_poster 컬럼 추가
+ALTER TABLE save
+ADD p_poster VARCHAR2(500);
+
 
 SELECT * FROM SAVE s ;
 
