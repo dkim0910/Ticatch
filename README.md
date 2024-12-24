@@ -28,25 +28,26 @@
 - 약 2달
 
 ## 맴버 구성
-- 조장 : 김민성 - 예매페이지 / 결제 / DB / ERD /  플로우 차트 / 시퀀스 다이어그램 / 메인페이지 / 마이페이지 / 로그인 및 회원가입
+- 조장 : 김민성 - 예매페이지 / 결제 / DB / ERD /  플로우 차트 / 시퀀스 다이어그램 / 메인페이지 / 마이페이지 / 로그인 및 회원가입 / 공연정보 불러오기
 - 팀원 : 박성우 - DB / ERD / 공연정보 불러오기 / Git 설정 / 스프링 & 리액트 통합
-- 팀원 : 이혜원 - 상세페이지 / 후기 / 찜 / DB / ERD / 플로우 차트 / 유스케이스
+- 팀원 : 이혜원 - 상세페이지 / 후기 / 찜 / DB / ERD / 플로우 차트 / 유스케이스 / 메인페이지 / 마이페이지
 - 팀원 : 손홍석 - 
 - 팀원 : 신윤창 -
 
 ## 설계도
 [플로우 차트 / ERD / 와이어프레임 유스케이스 등](https://drive.google.com/file/d/1rJ98jUYeRiusLpkJjoduckJKTypFYKiF/view?usp=sharing)
 
-## 개발 환경
+## 개발 환경 
+(노트북에서 작동하게끔 한거에서 버전은 변경되었을수 있음 검수 필요)
 ### Front-End
-- React (18.3.1) << 검수 필요
+- React (18.3.1)
 ### Back-End
-- Java 17 <- 21 << 노트북으로 옮길때 21로 됨 (Reservation 은 21로 작동함)
+- Java 17 <- 21 << 노트북으로 옮길때 21로 됨 (Reservation 및 newDetail 은 21로 작동함)
 - IDE : Spring Tools 4.25.0
 - Framewordk : Springboot (3.3.5)
 - Server : Apache / Tomcat
 - Database : Oracle DB (11.2.0.2.0) (DBeaber 24.1.3)
-- ORM : Hibernate (JPA) << 검수 필요
+- ORM : Hibernate (JPA)
 
 ## 주요 기능
 ### API 사용
